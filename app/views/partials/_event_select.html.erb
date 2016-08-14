@@ -1,0 +1,9 @@
+<div class="col-sm-8 offset-sm-2">
+
+  <% options = options_for_select(@events.map{ |event| [event.name, event.id] }) %>
+  <%= select_tag('event-select', options, prompt: "Please select an event:", remote: true, class: "form-control") %>
+
+</div>
+      <!-- I may have to use a radial menu with multiple checkboxes below instead of a dropdown. -->
+      <!-- It may be an event-by-event decision. Some may have tiers and others have choices. --> 
+

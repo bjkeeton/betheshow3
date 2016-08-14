@@ -1,0 +1,15 @@
+// grab event_id from event-select dropdown
+$('#event-select').change(function(e) {
+  var event_id = $(this).val();
+  console.log(event_id)
+// ajax call to populate div with :description and :price
+$.ajax({url: "/event_options/" + event_id,
+      type: 'GET',
+      dataType: 'json',
+      success: function(data) {
+        $('#event-options').empty().append(data);
+        }
+     });
+ });
+
+

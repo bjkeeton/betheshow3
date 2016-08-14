@@ -1,26 +1,9 @@
-<div class="row center">
-  <h1>Look at all our fantastic events!</h1>
-    <div class = "col-sm-8 offset-sm-2" id="event-logo">
-      <!-- include default Betheshow Hat Logo First -->
-      <!-- then change depending on which event is selected -->
-    </div>
-</div>
+<h1>Be the Show!</h1>
+<p>You should click this link and book a show!</p>
 
-<div class="row center"> <!-- first row start -->
-    <%= render 'partials/event_select' %>
-</div> <!-- first row end -->
-
-<div class = "row"> <!-- second row start -->
-  <%= render 'partials/event_options' %>
-</div> <!-- second row end -->
-
-<div class = "row"> <!-- third row start -->
-
-  <div class = "col-sm-8 offset-sm-2"> <!-- Event Gallery Images will appear here -->
+<div class="container">
+  <div class="center jumbotron">
+    <h2>You should book our shows!</h2>
+    <%= link_to "BOOK NOW", events_path, class: "btn btn-default button" %>
   </div>
-
-</div> <!-- third row end -->
-
-<script>
-<%= render 'partials/scripts' %>
-</script>
+</div>

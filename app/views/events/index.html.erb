@@ -1,29 +1,27 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Events</h1>
+<div class="row center">
+  <h1>Look at all our fantastic events!</h1>
+    <div class = "col-sm-8 offset-sm-2" id="event-logo">
+      <!-- include default Betheshow Hat Logo First -->
+      <!-- then change depending on which event is selected -->
+    </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Active</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row center"> <!-- first row start -->
+    <%= render 'partials/event_select' %>
+</div> <!-- first row end -->
 
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.name %></td>
-        <td><%= event.active %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class = "row"> <!-- second row start -->
+  <%= render 'partials/event_options' %>
+</div> <!-- second row end -->
 
-<br>
+<div class = "row"> <!-- third row start -->
 
-<%= link_to 'New Event', new_event_path %>
+  <div class = "col-sm-8 offset-sm-2"> <!-- Event Gallery Images will appear here -->
+  </div>
+
+</div> <!-- third row end -->
+
+<script>
+<%= render 'partials/scripts' %>
+</script>
