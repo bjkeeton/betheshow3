@@ -1,7 +1,9 @@
 <div class="center" >
   <h2>Available Options:</h2>
     <% @event.event_options.each do |e| %>
-      <p><%= @event.event_options.to_json %></p>
+      <p><strong>Name:</strong> <%= e.name %> </p>
+      <p><strong>Description:</strong> <%= e.description %></p>
+      <p><strong>Price:</strong> <%= e.price %></p>
     <% end %>
  </div>
 
