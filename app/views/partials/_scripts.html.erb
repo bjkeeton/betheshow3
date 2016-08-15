@@ -1,15 +1,13 @@
-// grab event_id from event-select dropdown
+// grab event_id from event-select dropdown and fill div with options
 $('#event-select').change(function(e) {
   var event_id = $(this).val();
   console.log(event_id)
-// ajax call to populate div with :description and :price
-$.ajax({url: "/events/" + event_id,
-      type: 'GET',
-      dataType: 'json',
+$.ajax({
+        async: true,
+        url: "http://localhost:3000/events/" + event_id, //still a problem when just path is given without http
+        type: 'GET',
       success: function(data) {
         $('#event-options').empty().append(data);
         }
      });
  });
-
-

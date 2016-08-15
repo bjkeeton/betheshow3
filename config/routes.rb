@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   root 'events#home'
 
-  get 'event/options', :as => 'options'
+  get 'events/options', :as => 'options'
 
 end

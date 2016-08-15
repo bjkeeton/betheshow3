@@ -1,11 +1,14 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :js, :json
 
   # GET /events
   # GET /events.json
   def index
     @events = Event.all
+    @event_options = EventOption.all
     @event = Event.new
+    @event_option = EventOption.new
   end
 
   # GET /events/1
@@ -14,9 +17,11 @@ class EventsController < ApplicationController
   end
 
   def options
-    #filter using id passed by ajax
     @options = Event.event_options.find(params[:event_id])
-    render json: @options
+    
+    respond_to do |format|
+      format.html {render json: @options}
+    end
   end 
 
   # GET /events/new
@@ -65,15 +70,6 @@ class EventsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
-    end
-    
-    def query_options
-      @event = Event.find(id: params[:id])  
-      @options = @event.event_options
-
-      respond_to do |format|
-        format.json { render :json => @options }
-      end
     end
 
   end
