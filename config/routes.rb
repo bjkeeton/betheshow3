@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   root 'events#home'
 
+     get '/query_options', to: 'events#query_options', as: :query_options
+
 end

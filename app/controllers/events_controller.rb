@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    @event = Event.new
   end
 
   # GET /events/1
@@ -59,6 +60,16 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
     end
+    
+    def query_options
+      @event = Event.find(id: params[:id])  
+      @options = @event.description
+
+      respond_to do |format|
+        format.json { render :json => @options }
+      end
+    end
+
   end
 
   private

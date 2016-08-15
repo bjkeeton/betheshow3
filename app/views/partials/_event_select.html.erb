@@ -2,8 +2,11 @@
 
   <div class="col-sm-4">
 
-    <% options = options_for_select(@events.map{ |event| [event.name, event.id] }) %>
-    <%= select_tag('event-select', options, prompt: "Please select an event:", remote: true, class: "form-control") %>
+    <%= form_for @event, remote: true do |f| %>
+     <%= f.collection_select :id, Event.order(:name), :id, :name, 
+                              options = { include_blank: "Please select an event:"}, 
+                              html_options = { class: "form-control", id: "event-select" } %>
+    <% end %>
 
   </div>
         <!-- I may have to use a radial menu with multiple checkboxes below instead of a dropdown. -->
