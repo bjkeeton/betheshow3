@@ -13,6 +13,12 @@ class EventsController < ApplicationController
   def show
   end
 
+  def options
+    #filter using id passed by ajax
+    @options = Event.event_options.find(params[:event_id])
+    render json: @options
+  end 
+
   # GET /events/new
   def new
     @event = Event.new
