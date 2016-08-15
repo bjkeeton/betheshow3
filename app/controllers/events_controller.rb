@@ -63,7 +63,7 @@ class EventsController < ApplicationController
     
     def query_options
       @event = Event.find(id: params[:id])  
-      @options = @event.description
+      @options = @event.event_options
 
       respond_to do |format|
         format.json { render :json => @options }
