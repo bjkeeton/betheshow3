@@ -10,6 +10,8 @@ class EventsController < ApplicationController
     @event_options = EventOption.all
     @event = Event.new
     @event_option = EventOption.new
+
+    @active_events = Event.where.not(active: false)
   end
 
   # GET /events/1

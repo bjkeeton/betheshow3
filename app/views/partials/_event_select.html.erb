@@ -3,7 +3,7 @@
   <div class="col-sm-4">
 
     <%= form_for @event, remote: true do |f| %>
-     <%= f.collection_select :id, Event.order(:name), :id, :name, 
+     <%= f.collection_select :id, @active_events, :id, :name, 
         options = { include_blank: "Please select an event:"}, 
         html_options = { class: "form-control", id: "event-select" } %>
     <% end %>
