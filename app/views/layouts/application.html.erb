@@ -10,6 +10,6 @@
 
   <body>
     <%= yield %>
-    <%= render 'partials/footer' %>
+    <%= render 'partials/footer' unless @disable_footer %>
   </body>
 </html>

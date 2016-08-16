@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_filter :disable_footer, only: [:options_partial]
   respond_to :html, :js, :json
 
   # GET /events
@@ -14,6 +15,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @disable_footer = true
   end
 
   def options
