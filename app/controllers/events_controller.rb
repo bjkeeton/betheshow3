@@ -13,7 +13,7 @@ class EventsController < ApplicationController
 
     @active_events = Event.where.not(active: false)
   end
-
+ex
   # GET /events/1
   # GET /events/1.json
   def show
@@ -75,6 +75,7 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
     end
+
 
   end
 
