@@ -32,11 +32,15 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # for user creation and authentication
-gem 'clearance'
+gem 'devise'
 
+# for respond_to js and json in controllers
 gem 'responders'
 
+# uses ActiveAdmin for CMS and model management
 
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 
 

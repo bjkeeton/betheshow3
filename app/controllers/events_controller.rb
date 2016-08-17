@@ -13,7 +13,7 @@ class EventsController < ApplicationController
 
     @active_events = Event.where.not(active: false)
   end
-ex
+
   # GET /events/1
   # GET /events/1.json
   def show
