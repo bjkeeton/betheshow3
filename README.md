@@ -12,7 +12,7 @@
 
 1. Landing page
   * Immediate links for each kind of event 
-    *(Banana Peek Circus, Purple People Painters, Noisy Neighbors, etc.)
+    *(Banana Peel Circus, Purple People Painters, Noisy Neighbors, etc.)
   * BOOK NOW button for each
     * when BOOK NOW is clicked, expands a list of each option for the event as checkboxes
     * upon selection, calendar is displayed with available dates and times
@@ -20,10 +20,10 @@
 
 2. Visible calendar to see which events and times are booked
   * Generate .ics for event export to other calendars upon confirmation
-  * Will this sync to an existing calendar? 
+  * This will sync to an existing Google Calendar
 
 3. Payment and booking
-  * Square, Stripe, or Braintree (though Braintree requires older Ruby, so it may be Stripe)
+  * Square, Stripe, or Braintree (as of early Augist, Braintree requires older Ruby version, so it may be Stripe)
   * No login for booking, just info
     * (Option to join the newsletter here, regardless)
 
@@ -37,16 +37,17 @@
 ## Questions to be answered
 
 1. Will the office manager be using this to book for call ins? (should be yes, imo)
-2. Will the calendar on the app sync to an existing calendar (such as Outlook?), or will it be the primary?
-  * If there is an existing calendar, I need to know how to access it?
+2. Will the calendar on the app sync to an existing calendar?
+    * Yes. Will sync to existing GOOGLE CALENDAR. (I must know how to access it.)
 3. Will the app replace the existing website? 
-  *pros and cons for both, but this app should stay more up to date easier than a static page, so I vote yes
+  * yes
 4. How often do the shows change and need to be updated on the booking site?
 5. How will people set times and dates? 
   * They pick a time and durations?
   * Prescheduled times and durations?
 6. What do you guys call these? shows? events? I need to know so I can name them accurately.
 7. Can the various tiers of events be purchased as mix-and-match, or are they set?
+  * SOME are pre-set, some are add-ons. May have to include a "booking add-on option" menu, depending.
 
 
 ## Page Heirarchy and Plan
@@ -60,21 +61,11 @@
     -Contact info
     -About Us
 
-* Backend EventCreator (using Clearance gem) 
+* Backend EventCreator (using ActiveAdmin and Devise gems) 
   - Admin Login
     - Basic login for users
   - create_event 
     - event_option_id
     - event_option
       - price, description
-  - Each event_option will be iterated through on the event.html.erb page using event_option.each
-
-
-* Event (model)
-  - event_name:string
-  - t.boolean :active
-* EventTier (model)
-  - tier_title:string
-  - price:float
-  - description:text
-
+ 

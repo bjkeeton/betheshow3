@@ -19,6 +19,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'bootstrap-sass', '3.3.6'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+# Use JQuery UI to pretty up jQuery and get datepicker, specifically
+gem 'jquery-ui-rails'
+gem 'jquery-ui-themes'
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -38,9 +42,12 @@ gem 'devise'
 gem 'responders'
 
 # uses ActiveAdmin for CMS and model management
-
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
+# uses Google Calendar API and oauth for event booking
+gem 'google-api-client', '~> 0.9', require: 'google/apis/calendar_v3'
+
 
 
 
