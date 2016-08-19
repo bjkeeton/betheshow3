@@ -77,10 +77,7 @@ class EventsController < ApplicationController
     end
 
   def book_now
-    event_id = params[:event_id]
-    respond_to do |format|               
-      format.js
-    end        
+    @event_option_id = params[:event_option_id]
   end 
 
   end
