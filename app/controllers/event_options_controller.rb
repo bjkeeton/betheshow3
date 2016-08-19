@@ -1,15 +1,20 @@
 class EventOptionsController < ApplicationController
   before_action :set_event_option, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :js, :json
 
   # GET /event_options
   # GET /event_options.json
   def index
+    @events = Event.all
     @event_options = EventOption.all
+    @event = Event.new
+    @event_option = EventOption.new  
   end
 
   # GET /event_options/1
   # GET /event_options/1.json
   def show
+
   end
 
   # GET /event_options/new
@@ -59,6 +64,14 @@ class EventOptionsController < ApplicationController
       format.html { redirect_to event_options_url, notice: 'Event option was successfully destroyed.' }
       format.json { head :no_content }
     end
+ 
+  def book_now
+    respond_to do |format|               
+      format.js
+    end        
+  end 
+
+
   end
 
   private

@@ -47,6 +47,9 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 # uses Google Calendar API and oauth for event booking
 gem 'google-api-client', '~> 0.9', require: 'google/apis/calendar_v3'
 
+# use iCalendar for .ics generation
+gem 'icalendar'
+
 
 
 

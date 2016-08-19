@@ -140,6 +140,7 @@ GEM
     httpclient (2.8.2.2)
     hurley (0.2)
     i18n (0.7.0)
+    icalendar (2.4.0)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -308,6 +309,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   google-api-client (~> 0.9)
+  icalendar
   inherited_resources!
   jbuilder (~> 2.5)
   jquery-rails
