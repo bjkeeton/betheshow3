@@ -76,6 +76,11 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
 
+  def book_now
+    respond_to do |format|               
+      format.js
+    end        
+  end 
 
   end
 

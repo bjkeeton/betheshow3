@@ -79,3 +79,8 @@
       - If conflict, flash error message of conflict and repeat until no conflict.
   - Once booking is confirmed, send confirmation email wtih ICS to user and to Be The Show office manager calendar account
     - (The ICS should be added automagically to Be The Show event calendar)
+
+** BIG TIME ERRORS TO FIX:
+  - When selecting the blank on #event-select dropdown, it loads events/index in the div
+  - AJAX event-select needs routing fix for Http 
+  

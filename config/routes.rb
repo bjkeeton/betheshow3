@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   root 'events#home'
 
   get 'events/options', :as => 'options'
+  get '/book_now', to: 'events#book_now', as: :book_now
 
 end
