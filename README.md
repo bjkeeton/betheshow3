@@ -68,4 +68,14 @@
     - event_option_id
     - event_option
       - price, description
- 
+
+** Calendar workflow
+  - See all events. Radio menu? Maybe
+  - Click book now
+  - Populate div with .datepicker()
+  - select date and time
+    - rails checks for conflicts on Google Calendar
+      - If no conflict, populate div with booking info
+      - If conflict, flash error message of conflict and repeat until no conflict.
+  - Once booking is confirmed, send confirmation email wtih ICS to user and to Be The Show office manager calendar account
+    - (The ICS should be added automagically to Be The Show event calendar)

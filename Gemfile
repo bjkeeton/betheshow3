@@ -21,7 +21,6 @@ gem 'bootstrap-sass', '3.3.6'
 gem 'jquery-rails'
 # Use JQuery UI to pretty up jQuery and get datepicker, specifically
 gem 'jquery-ui-rails'
-gem 'jquery-ui-themes'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'

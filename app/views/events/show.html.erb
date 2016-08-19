@@ -7,16 +7,14 @@
 </div>
 
 <div class = "center row">  
-  <h3>Book this event now!</h3>
-    <div class = "container">
-      <%= form_for @event do |f| %>
-      <div class = "field">
-        <%= f.label :choose_your_date %>
-        <%= f.text_field :date %>
-      </div>
-      <% end %>
-    </div>
-    <% end %> 
+  <div class = "col-xs-6">
+      <button>Check Available Dates!</button>
+  </div>
+  <div class = "col-xs-6">
+      <button>Book This Event Now!</button>
+  </div>    
+      <hr>
+    <% end %>
  </div>
 
  <div class = "center" id= "gallery">
