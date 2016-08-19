@@ -8,10 +8,11 @@
 
 <div class = "center row">  
   <div class = "col-xs-6">
-      <button>Check Available Dates!</button>
+      <%= link_to "Check Available Dates", root_path, :class => "button", :id => "calendar-button" %>
   </div>
   <div class = "col-xs-6">
-      <button>Book This Event Now!</button>
+      <%= link_to "Book This Event Now!", root_path, :class => "button", :id => "calendar-button" %>
+      
   </div>    
       <hr>
     <% end %>
