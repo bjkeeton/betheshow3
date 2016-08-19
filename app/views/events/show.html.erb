@@ -11,7 +11,7 @@
       <%= link_to "Check Available Dates", root_path, :class => "button", :id => "available-dates-button" %>
   </div>
   <div class = "col-xs-6">
-     <%= link_to "Book This Event Now!", book_now_path(@event), :id => "book-now-button", :class => "button" %>
+     <%= link_to "Book This Event Now!", book_now_path(:event => @event.id), :id => "book-now-button", :class => "button" %>
 
   </div>    
       <hr>
