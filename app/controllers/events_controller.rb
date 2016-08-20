@@ -77,8 +77,9 @@ class EventsController < ApplicationController
     end
 
   def book_now
-    @event_option_id = params[:event_option_id]
+    @chosen_option = EventOption.find(params[:event_option_id])
   end 
+
 
   end
 

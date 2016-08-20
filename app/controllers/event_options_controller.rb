@@ -65,12 +65,10 @@ class EventOptionsController < ApplicationController
       format.json { head :no_content }
     end
  
-  def book_now
-    respond_to do |format|               
-      format.js
-    end        
-  end 
-
+    def book_now
+      @event_option_id = params[:event_option_id]
+      @chosen_option = EventOption.find(params[:event_option_id])
+    end 
 
   end
 
